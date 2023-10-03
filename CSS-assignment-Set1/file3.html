@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Set 1 </title>
+        <style>
+
+            header, footer, nav {
+                font-size: 30px; 
+                font-weight: bold;
+                width: 700px;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+                border: 1px solid black;
+                padding: 30px 0px 12px;
+            }
+
+            .upper {
+                margin-bottom: 0px;
+            }
+
+            .middle {
+                margin-bottom: 0px;
+            }
+
+            .bottom {
+                margin-top: 0px;
+                padding-bottom: 15px;
+            }
+
+            section {
+                display: grid;
+                grid-template-columns: 25% 75%;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                width: 700px;
+                margin-left:auto;
+                margin-right: auto;
+            }
+           
+            #block1 {
+                border: 0.5px solid black;
+                margin: 0px; 
+                padding-top: 150px;
+                padding-bottom: 150px;
+                padding-left: 80px;
+                padding-right: 90px;              
+            }
+
+            #block2 {
+                border: 1px solid black;
+                margin: 0px; 
+                padding-top: 150px;
+                padding-bottom: 150px;
+                padding-left: 30px;
+                padding-right: 210px;  
+                
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <header class="upper"> Header Section </header>
+
+        <nav class="middle"> Navigation Bar</nav>
+
+        <section>
+            <div id="block1"> Index </div>
+            <div id="block2"> Content Section </div>          
+        </section>
+        
+        <footer class="bottom"> Footer Section </footer>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Set 1 </title>
+        <style>
+
+            header, footer, nav {
+                color: green;
+                font-size: 30px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif; 
+                height: 43px;
+                width: 700px;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+                border: 3px solid darkblue;
+                padding: 12px 0px 12px;
+            }
+
+            .upper {
+                margin-bottom: 4px;
+            }
+
+            .middle {
+                margin-bottom: 2px;
+            }
+
+            .bottom {
+                margin-top: 4px;
+            }
+
+            section {
+                display: grid;
+                grid-template-columns: 20% 60% 20%;
+                
+                color: green;
+                font-size: 30px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif; 
+                width: 712px;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+            }
+           
+            .block1, .block2, .block3 {
+                border: 3px solid darkblue;
+                margin: 3px; 
+                padding: 150px 0px 150px;               
+            }
+
+            /*Media Query*/
+
+            @media screen and (min-width:0px) and (max-width:600px) {
+                section {
+                    display: grid;
+                    grid-template-columns: auto;
+                    
+                    
+                }
+
+                .block1, .block2, .block3 {
+                border: 3px solid darkblue;
+                margin: 3px; 
+                padding: 70px 0px 70px;               
+            }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header class="upper"> Header </header>
+
+        <nav class="middle"> Navigation Menu</nav>
+
+        <section>
+            <div class="block1"> Content </div>
+            <div class="block2"> Main <div> Content </div> </div>
+            <div class="block3"> Content </div>            
+        </section>
+        
+        <footer class="bottom"> Footer </footer>
+    </body>
+</html>

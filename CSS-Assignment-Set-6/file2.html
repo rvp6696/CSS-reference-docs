@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 6 </title>
+
+    <style>
+
+        body {
+            background-image: linear-gradient(-150deg, orangered, #f3034f), url(snow.JPG);
+            background-size: 100% 110%;
+            background-blend-mode: screen;
+
+        }
+        
+       section {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        height: 650px;
+        background: white;
+        border-radius: 9px;
+        box-shadow: 0px 0px 10px #fa0252;
+       }
+
+       .topa {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 35px;
+        text-align: center;
+        padding-top: 65px;
+        padding-bottom: 75px;
+       }
+
+       label {
+            color: grey;
+            font-size: 12px;
+            font-family: Arial;
+            padding-left: 50px;
+     
+        }
+
+       input.high1 {
+            width: 640px;
+            height: 33px;
+            margin-left: 50px;
+            background: white;
+            border: none;
+            border-bottom: 2px solid rgb(165, 164, 164);
+            border-radius: 4px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+
+        input.high1:focus {
+            outline: none;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(0.25turn, #f30363, orangered);
+            border-image-slice: 1;
+   
+        }
+
+        textarea {
+            width: 640px;
+            height: 93px;
+            margin-left: 50px;
+            background: white;
+            border-bottom: 2px solid rgb(165, 164, 164);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 4px;
+            margin-top: 14px;
+            margin-bottom: 10px;
+            resize: none;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-bottom: 2px solid #b20139;
+        }
+
+        .butt1 {
+            margin-left: 260px;
+            width: 240px;
+            height: 50px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            background-image: linear-gradient( -150deg, orangered, #f30363,  #f30363 );
+            border-radius: 4px;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <section>
+        <p class="topa"> Contact Us </p>
+
+        <label> NAME </label> <br/>
+        <input type="text" class="high1"/>
+
+        <br/>
+        <br/>
+
+        
+        <input type="email" placeholder="EMAIL" class="high1"/>
+        <br/>
+        <br/>
+
+        <textarea placeholder="MESSAGE"></textarea>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <button class="butt1"> Send Your Message </button>
+
+    </section>
+</body>
+</html>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 3 </title>
+    
+    <style>
+        body{
+            background: rgb(244, 246, 248);
+        }
+        #top {
+            margin: 100px auto 100px;
+            width: 1450px;
+            display: grid;
+            grid-template-columns: 25% 75%;
+            
+        }
+
+        #first {
+            margin-top: 40px;
+            margin-left: 55px;
+            margin-right: 10px;
+            margin-bottom: 500px;
+            font-size: 20px;
+            border: 1px solid #2772db;  
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;   
+            
+        }
+
+        .con1 {
+            background: #2772db;
+            color: white;
+            padding-left: 15px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .con2 {
+            border: 1px solid #2772db;
+            padding-left: 15px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            color: #2772db;
+            text-decoration: underline;
+            background: white;
+        }
+
+        .high {
+            color: skyblue;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+
+        #second {
+            display: grid;
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            background: white;
+            margin-left: 25px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            height: 300px;
+            background: rgb(244, 246, 248);
+        }
+        
+        .block1 {
+            margin-right: 15px;
+        }
+
+        .block2 {
+            margin-right: 10px;
+        }
+
+        .block3 {
+            margin-right: 15px;        
+        }
+        
+        #pic1 {
+            height: 200px;
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #2772db;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+            margin-bottom: -10px;
+        }
+
+        #pic1 img {
+            height: 200px;
+            width: 200px;
+        }
+
+        label {
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <section id="top"> 
+        <div id="first"> 
+            <div class="con1"> Shopping Category </div>
+            <div class="con2"> in Mobile Category </div>
+            <div class="con2">  in Computer Category  </div>
+            <div class="con2">  in Dress Category </div>
+            <div class="con2">  in Book Category </div>
+        </div>
+
+        <div> 
+            <p class="high"> Available Products </p>
+
+            <section id="second">
+                <div class="block1"> Java 
+                    <div id="pic1"> <img src="image1.jpg" /> </div> <br/>
+                    <label> Rs. 200 </label>
+                </div>
+                <div class="block2"> Nodejs 
+                    <div id="pic1"> <img src="image4.jpg" /> </div> <br/>
+                    <label> Rs. 300 </label>
+                </div>
+                <div class="block3"> Python 
+                    <div id="pic1"> <img src="image2.jpg" /> </div> <br/>
+                    <label> Rs. 500 </label>
+                </div>
+            </section>
+
+        </div>
+    </section>
+</body>
+</html>
+
+

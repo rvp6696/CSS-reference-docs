@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Set 1 </title>
+        <style>
+
+            header, footer, nav {
+                font-size: 30px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif; 
+                font-weight: bold;
+                height: 43px;
+                width: 700px;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+                border: 3px solid black;
+                padding: 12px 0px 12px;
+            }
+
+            .upper {
+                margin-bottom: 4px;
+            }
+
+            .middle {
+                margin-bottom: 8px;
+                padding: 2px 0px 2px;
+            }
+
+            .bottom {
+                margin-top: 8px;
+                padding: 4px 0px 4px;
+            }
+
+            section {
+                display: grid;
+                grid-template-columns: 70% 30%;
+                font-size: 30px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif; 
+                font-weight: bold;
+                width: 712px;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+            }
+           
+            .block1 {
+                border: 3px solid black;
+                margin: 3px; 
+                padding-top: 100px;
+                padding-bottom: 200px;
+                padding-left: 20px;
+                padding-right: 100px;             
+            }
+
+            .block2 {
+                border: 3px solid black;
+                margin: 3px; 
+                padding: 100px 0px 200px;               
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header class="upper"> HEADER </header>
+
+        <nav class="middle"> NAVIGATION</nav>
+
+        <section>
+            <div class="block1"> CONTENT </div>
+            <div class="block2"> SIDEBAR </div>            
+        </section>
+        
+        <footer class="bottom"> FOOTER </footer>
+    </body>
+</html>

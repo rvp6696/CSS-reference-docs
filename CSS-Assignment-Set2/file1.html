@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Set 2 </title>
+        <style>
+
+            header, nav, footer {
+                text-align: center;
+                font-size: 25px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                border: 2px solid black;
+                margin-left: auto;
+                margin-right: auto;
+                width: 399px;
+            }
+
+            #part1 {
+                display: grid;
+                grid-template-columns: 260px 140px;
+                min-height: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                width: 399px;
+
+            }
+
+            .block1 {
+                padding: 5px 0px 5px;
+                margin-bottom: 6px;
+            }
+
+            .block2 {
+                padding: 15px 0px 15px;
+                margin-bottom: 6px;
+                text-align: center;
+                font-size: 25px;
+                border: 2px solid black;
+            }
+
+            .block3 {
+                padding: 73px 0px 73px;
+                margin-bottom: 8px;
+                text-align: center;
+                font-size: 25px;
+                border: 2px solid black;
+            }
+
+            .block4 {
+                text-align: center;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                border: 2px solid black;
+                margin-bottom: 8px;
+                margin-right: 8px;
+                padding: 32px 0px 32px;
+            }
+            
+            
+        </style>
+    </head>
+
+    <body>
+        <header class="block1"> &ltheader&gt</header>
+        <nav class="block1"> &ltnav&gt </nav>
+
+        <section id="part1"> 
+            <div> 
+                <section id="part2">
+                    <div class="block4"> &ltsection&gt </div>
+                    <div class="block4"> &ltarticle&gt </div>
+                </section>
+            </div>
+            <div class="block3"> &ltaside&gt </div>
+        </section>
+
+        <footer class="block1"> &ltfooter&gt </footer>
+    </body>
+</html>

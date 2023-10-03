@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 5 </title>
+    
+    <style>
+       
+       .top {
+        padding-top: 50px;
+        padding-bottom: 10px;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        
+       }
+
+       #highval {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+       }
+        
+       #block2 {
+        margin-top: 64px;
+        margin-left: 30px;
+        margin-right: 30px;
+        
+        text-align: center;
+        height: 300px;
+        box-shadow: 0px 0px 13px grey;
+        border: 2px solid grey;
+       }
+
+       .mid {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        
+       }
+
+       .inside {
+        width: 320px;
+        height: 25px;
+        margin-left: 70px;
+        margin-bottom: 12px;
+        box-shadow: 0px 0px 13px grey;
+        border: 2px solid grey;
+       }
+
+       .mid2 {
+        margin-left: 70px;
+        font-size: 16px;
+       } 
+
+       .sub1 {
+        margin-top: -19px;
+       }
+
+       .male {
+        width:11px;
+        height:11px;
+        box-shadow: 0px 0px 16px grey; 
+        border-radius: 999px;
+        -webkit-appearance: inherit;
+        border:2px solid #999999;
+       }
+
+       textarea {
+        margin-left: 70px;
+        width: 320px;
+        height: 150px;
+        border: 2px solid grey;
+        margin-top: -7px;
+        box-shadow: 0px 0px 13px grey;
+       }
+       
+       .butt1 {
+        background: grey;
+        border: 2px solid grey;
+        box-shadow: 0px 0px 13px grey;
+        border-radius: 4px;
+        color: white;
+        width: 80px;
+        height: 25px;
+        margin-left: 190px;
+        text-align: center;
+        margin-top: 6px;
+        margin-bottom: 20px;
+       }
+       
+       label {
+        font-size: 13px;
+       }
+
+       #lowval {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        text-align: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+       }
+
+       .mop1 {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        
+        
+        padding-bottom: 15px;
+       }
+
+       .mop2 {
+        text-align: center;
+        font-size: 16px;
+        
+       }
+
+       .mop3 {
+        text-align: center;
+        font-size: 11px;
+        margin: 15px;
+        
+       }
+
+       img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        padding-bottom: 6px;
+       }
+    </style>
+    
+</head>
+<body>
+    <p class="top"> Get in Touch with our experts </p>
+
+    <section id="highval">
+        <div id="block1"> 
+            <p class="mid"> Write Us </p>
+            
+            <div>
+                <input type="text" placeholder="Full Name *" class="inside"/>
+                <input type="email" placeholder="Email *" class="inside"/>
+                <input type="text" placeholder="Company *" class="inside"/>
+            </div>
+        
+            <div class="sub1"> 
+                <p class="mid2"> Are you an existing customer?* </p> 
+                <p class="mid2"> 
+                    <label> Yes </label>   &nbsp;  <input type="radio" class="male"><label> &nbsp;&nbsp;
+                    <label> No </label>    &nbsp;  <input type="radio" class="male"><label>
+                </p>
+            </div>
+
+            <textarea placeholder="Your Message Here..."></textarea>
+            
+            <button class="butt1"> Send</button>
+        </div>
+        
+        <div id="block2"> 
+            
+            <div class="newb1"> 
+                <p class="mop1"> Meet our experts</p>
+
+                <p class="mop2"> Live support available from 6am-5pm Mon-Fri</p>
+
+                <section id="lowval">
+                    <p class="mop3"> <img src="pic1.JPG"/> Expert_Name and Expertese </p>
+                    <p class="mop3"> <img src="pic1.JPG"/> Expert_Name and Expertese </p>
+                    <p class="mop3"> <img src="pic1.JPG"/> Expert_Name and Expertese </p>
+                </section>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
+
+
+<!--
+Yes <input type="radio" class="male"/>
+                    
+No <input type="radio" class="male"/>
+
+-->

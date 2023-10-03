@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Set 1 </title>
+        <style>
+
+            header, footer {
+                font-size: 30px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif; 
+                font-weight: bold;
+                text-align: center;
+                border: 3px solid darkblue;
+            }
+
+            .upper {
+                margin-bottom: 15px;
+                margin-top: 10px;
+                padding-top: 12px;
+                padding-bottom: 10px;
+                padding-left: 500px;
+                padding-right: 500px;
+            }
+
+            .bottom {
+                margin-top: 15px;
+                padding-top:7px;
+                padding-bottom: 6px;
+                padding-left: 500px;
+                padding-right: 500px;
+            }
+
+            section {
+                display: grid;
+                grid-template-columns: 20% 80%;
+                font-size: 30px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif; 
+                font-weight: bold;
+                width: 1520px;
+                text-align: center;
+            }
+           
+            .block1 {
+                border: 3px solid darkblue;
+                margin-right: 10px;
+                padding-top: 265px;
+                padding-bottom: 265px;
+                padding-left: 40px;
+                padding-right: 60px;
+
+            }
+
+            .block2 {
+                border: 3px solid darkblue;
+                margin-left: 10px; 
+                padding-top: 265px;
+                padding-bottom: 265px;
+                padding-left: 300px;
+                padding-right: 300px;            
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <header class="upper"> HEADER </header>
+
+        <section>
+            <div class="block1"> NAVIGATION </div>
+            <div class="block2"> CONTENT </div>            
+        </section>
+        
+        <footer class="bottom"> FOOTER </footer>
+    </body>
+</html>

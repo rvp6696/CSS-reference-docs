@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Animation example </title>
+    </head>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+
+        /* CSS Animation*/
+
+        @keyframes myanimation {
+            25% { 
+                background-image: url(image2.jpg); 
+                font-size:30px;
+            }
+            50% { 
+                background-image: url(image3.jpg); 
+                font-size:60px;
+            }
+            75% { 
+                background-image: url(image4.jpg); 
+                font-size:90px;
+            }
+        }
+
+        section {
+            background-image: url(image1.jpg);
+            background-size: 100% 100%;
+            color: white;
+            font-size: 100px;
+            text-align: center;
+            padding: 100px;
+            height: 300px;
+            animation: myanimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+
+<body>
+    <section>  
+        CSS Simple Animation !..
+    </section>
+</body>
+</html>

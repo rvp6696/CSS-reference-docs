@@ -1,0 +1,891 @@
+--------------------------------------------------------
+> CSS (Cascading Style Sheet)
+-------------------------------------------------------
+
+-> It has collections of pre-defined property and values, that used to change look and feel of webpage.
+-> HTML has collection of pre-defined tags with limited property and values.
+-> Responsive Webpage = HTML(tags) + CSS (property + values)
+-> It is a styling language and not a programming language.
+
+* is asterisk
+& is ampersand
+--------------------------------------------------------- 
+> CSS Boiler plate:  (no shortcut available)
+---------------------------------------------------------
+
+		* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        html,body {
+            width: 100%;
+            height: 100%;
+            }
+
+--------------------------------------------------------- 
+> Types of CSS :
+---------------------------------------------------------
+
+1. inline-css : very less in use (usually not asked in interviews due to code complexity)
+2. internal-css : it is useful (10% we can use)
+3. external-css : very useful (80% we will use)
+4. import-css : very less in use (5% to 10% we can use)
+
+ NOTE :: Make use of inline and internal CSS only for urgent testing purpose.
+
+        > Inline CSS is useful when we want to style a single element.
+        > Internal CSS is useful when we want to style a single webpage.
+        > External CSS is useful when we want to style multiple web pages (web apps).
+
+---------------------------------------------------------
+1. Syntax for inline-css :
+---------------------------------------------------------
+
+    <tagname style="property:value; property2:value2; property3:value3;"> 
+        Content to display 
+    </tagname>
+
+Example:
+
+    <p style="height:200px; width:300px; background:red">
+        Welcome to Bangalore
+    </p>
+
+---------------------------------------------------------
+> Problem with Inline CSS :
+---------------------------------------------------------
+   
+    -> It is One to One.ie, write CSS code once and use only once.
+    -> Due to one to one, the code duplicacy will happen.
+    -> If code is duplicated, then file size shall increase. (heavy file takes long time to load and page loads slow)
+    -> If page is slow, the user experience is bad. (Google will reject the page from Search console)
+
+---------------------------------------------------------
+2. internal-css:
+---------------------------------------------------------
+    > It is one to many. (write CSS code one time and use in HTML many times) 
+
+    Syntax:
+
+    selector {
+        property1: value1;
+        property2: value2;
+        property3: value3;       
+    }
+
+    Example:
+
+    p {
+        height:200px;
+        width:200px;
+        background:red;
+    }    
+
+-------------------------------------------------------------------------------
+Problem with import CSS:
+-------------------------------------------------------------------------------
+
+> It has one problem it work on read and write method (when source file is big)
+> It reads data from source file and it shall take time to read and write (page execution becomes slow)
+> It sends a request to the file and fetches the CSS from the file and writes it inside <style> tag.
+> Page response is high due to read and write methodology (ping is also high).
+
+    Syntax:   (needs to be writen inside of head tag)
+
+    <style> 
+        @import url("style.css");
+    </style>
+
+
+-----------------------------------------------------------------------------
+2. external-css:
+----------------------------------------------------------------------------
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>External CSS</title>
+                <link rel="stylesheet" href="style.css" />
+
+            </head>
+            <body> </body>
+            </html>
+
+-------------------------------------------------------------------------------
+Problem with external CSS:
+-------------------------------------------------------------------------------
+
+> Easily people can view our CSS code.
+    [Open web page > right click > view page source > there will be a link generated.]
+
+> This is where import method is useful.
+
+> Import method is secure as people cannot copy or view our source code of CSS, but performance part link method is more fast.
+
+------------------------------------------------------------------------------
+
+NOTE:     
+    > Hence we use link method and the CSS file will be encrypted while uploading on the server.
+
+    > So encrypted file is called build file. (build and deployment part)
+
+------------------------------------------------------------------------------
+> Selectors:
+------------------------------------------------------------------------------
+    > All HTML tags are called selectors in CSS.
+    
+    NOTE: single ID we can declare once and use only once ( as duplicacy happens ) , but a single class can be used multiple times.
+
+    > To write CSS one to many, the CSS has given following options: (types of selectors) (most used methods are ID and class)
+
+
+      1. css for tag name - example2.html
+        Example:
+        
+            p {
+                width: 21%;
+                background: red;
+                font-size: 60px;
+                color: white;
+                float: left;
+                height: 200px;
+                margin: 2%;
+            }
+
+      2. css for tag group - example3.html
+        Example:
+
+            h1,h2,h3,p,div,section {
+                color: white;
+                font-style: italic;
+                font-size: 60px;
+            }
+
+
+      3. css for id - example4.html (Every element should have unique ID and hence same ID cannot be used many times,
+                                                                                     else there will be conflict in JS)
+        Example:
+
+            #block1 {
+                margin: 2%;
+                background: blue;
+                font-size: 50px;
+                text-align: center;
+            }
+
+            
+            #block2 {
+                height: 500px;
+                margin: 2%;
+                background: cyan;
+                font-size: 80px;
+                text-align: center;
+                color: red;
+            }
+            
+            #block3 {
+                margin: 2%;
+                background: lightgrey;
+                font-size: 60px;
+                text-align: center;
+            }
+
+      4. css for class - example5.html (you make use of class many times if the same design is reqd)
+        Example:
+
+            .block2 {
+                height: 150px;
+                margin: 2%;
+                width: 21%;
+                float: left;
+                font-size: 30px;
+                background: orange;
+                color: white;
+                text-align: center;
+        }
+
+      5. css for parent and child tag - example6.html
+        Example:
+            #topnav ul li {
+                font-size: 40px;
+                color: blue;
+                display: inline-block;
+                margin-left: 40px;
+                list-style-type: none;
+            }
+
+            ul li {
+                text-decoration: underline;
+            }
+
+
+      6. css for tag attribute - example7.html (least used method)
+        Example:
+
+        input[type="text"] {
+            height: 40px;
+            width: 300px;
+        }
+
+        
+        input[type="number"] {
+            height: 35px;
+            width: 330px;
+        }
+
+      7. Universal selector (rarely used):  Extra
+
+	Syntax:
+   
+  	* {
+            property: value;
+     	    .
+            .
+     	    .
+   	  }
+
+------------------------------------------------------------------------------
+> Order of Cascading CSS rules:
+------------------------------------------------------------------------------
+
+    > Position of CSS rule:
+      top to bottom. bottom once is the top priority.
+
+    > Specificity:
+
+      ID (P1) -> Attribute(P2) -> Class (P3) -> element (P4)
+
+    > Type of CSS:
+
+      inline (P1) -> Internal (P2) -> external (P3)
+
+    > Importance:
+    
+      !important;   > Ensures that this is most important rule of that element
+    
+-------------------------------------------------------------
+> Combining CSS Selectors:
+-------------------------------------------------------------
+    
+    1. Group combination:
+		selector1, selector2 {
+		    property:value;
+		   }
+	
+
+	2. Child combination:
+		selector1 > selector2 {
+		    property:value;
+		   }                >> In this case selector 1 is parent and selector 2 is child  (applies only to direct child)
+
+    3. Descendant combination:
+		selector1 selector2 {
+		    property:value;
+		   }                >> In this case selector 1 is ancestor and selector 2 is descendant (apply to any descendant)
+
+    
+	4. Chaining combination:
+		selector1selector2.class#ID {
+		    property:value;
+		   }                >> In this apply where all selectors are True (specific). Chain selectors with no blank space.
+	
+		Example:
+			h1#high.text.newdata {
+			   color: blue;	
+			   }                     >> applies to one specific element
+
+
+    5. Combining Combiners:
+		Selector1 selector2selector3 {
+		    property:value;
+		   }                >> In this selector1 is ancestor and selector2, selector3 are in chaining fashion.
+
+-----------------------------------------------------------
+List of properties and values in CSS:
+-----------------------------------------------------------
+
+    > height - ( 3 methods ) refer height.html
+        > height: 200px; -> It is fixed in all size of screen devices
+        > height: 50% -> it is suitable for all screen size
+        > min-height: 200px/50%;  -> It is fixed for min height of 200px or 50% and if content is more then it shall increase accordingly
+        > height: auto;  -> height shall increase or decrease, based on contents 
+
+
+    > width - 4 methods width.html
+        > width: 300px; -> It is fixed in all size of screen devices
+        > width: 70%; -> it is suitable for all screen size
+        > min-width: 300px/70%; -> It is fixed for min width of 300px or 70% and if content is more then it shall increase accordingly
+        > max-width: 300px/70%; -> It is fixed for max width of 300px or 70% and if content is more then it shall not increase further
+
+    > background - 9 methods    background.html
+        > background: red; -> background of the element will be set to red
+        > background-color: red; ->
+        > background-color: rgb(100, 50, 80); -> it mixes red, green and blue color to generate a fourth color
+        > background-color: rgba(100, 50, 80, 0.1 to 1); -> same as aabove but here by using last value we can set the brightness of the color as well
+        > background-image: url(image1.jpg) -> you can set image as a background
+            background-size: 100% 100%; -> complete photo will fit into the background (x,y axis %)
+            background-size: cover;
+            background-size: contain;
+            background-size: auto;
+        > background-image: linear-gradient(red, green, blue);
+        > background-image: linear-gradient(to left, red, green, blue);
+        > background-image: linear-gradient(to right, red, green, blue);
+        > background-image: linear-gradient(to top, red, green, blue);
+
+                Additional:         
+
+                background-position: top;
+                background-position: center;
+                background-position: bottom;
+
+    > Color System: 
+      1. RGB (range is 0 - 255)
+      2. Hexadecimal -> 0 to 15 (RGB each from 00 to ff)
+
+      coolors.co
+
+
+    > float is used to change behaviour of tags from block level to inline.
+       > float: left; - it converts block level element to inline element and starts printing from left to right.
+       > float: right; - it converts block level element to inline element and starts printing from right to left.
+       > clear: left; or clear: right;  > It clears/releases the floating rule for that particular element.
+
+    > margin - it applies space outside of tags. (works just like cellspacing is tables in HTML)
+       > margin: auto; - it print elements in center of the area.
+       > margin: 50px; - it applies 50px spaces from all the sides. (top, bottom, left & right)
+       > margin-top:
+       > margin-bottom:
+       > margin-left:
+       > margin-right: 
+       > margin: top left/right bottom; - it works only when both left and right have same amount of spacing.
+          ex: margin: 50px 100px 40px;
+
+    > margin in minus:
+       > margin-top: -100px;
+       > margin-bottom: -100px;
+       > margin-left: -100px;
+       > margin-right: -100px;
+
+
+    > padding - it is used to apply space inside of elements    padding.html
+        > padding: 20px; - it applies space from all side.
+        > padding-top: 20px; - applies space only from top side
+        > padding-bottom: 20px; - applies space only from bottom side
+        > padding-left: 20px; - applies space only from left side
+        > padding-right: 20px; - applies space only from right side
+        > padding: top left/right bottom; 
+
+ 
+    > border - 8 methods   border.html
+        > solid
+        > dotted
+        > dashed
+        > double
+        > inset
+        > outset
+        > ridge
+        > groove
+
+      > Border direction :
+        > border: 10px; - all side
+        > border-top: 10px;
+        > border-left: 10px;
+        > border-right: 10px;
+        > border-bottom: 10px;
+
+        Example:
+
+        border: 10px solid red; --> 10px border with type solid with color red (% will not work here use only in pixels)
+
+        >   border: 10px solid green;
+            border-width: 0px 10px 20px 30px;  >> works clock wise 
+            border-width: 10px 20px;   >> top/bottom + left/right
+
+    > Box-shadow -- like a border    boxshadow.html
+
+        > box-shadow: from-left from-top density color; -- this a syntax
+        > box-shadow: 0px 0px 10px red;
+
+        NOTE: give values in negative pixels to move the shadow to left and top. (refer example)
+
+    > Text-shadow -- like a box shadow that is 3d text....   textshadow.html
+
+        > text-shadow: from-left from-top density color; -- this a syntax
+        > text-shadow: 0px 0px 10px red;
+
+        NOTE: give values in negative pixels to move the shadow to left and top. (refer example)
+
+    > Pixel, Point, em, rem, fr, vh:
+
+        there are two categories : i. absolute(px,pt,vh)  ii. relative (%,em,rem)
+        > Pixel > 1px > 0.26mm
+        > Point > 1pt > 0.35mm
+        > em    > 1em > 100% of the parent tag
+        > rem   > 1rem > 100% of root (html tag)
+        > fraction > 1fr  > indicates one fraction on the screen (if multiple fr are declared then width and height of all fr will remain same)
+        > viewpoint height > 1vh > indicates the height of window currently viewing which is actually 100vh. (only height)
+
+
+    > font.google.com  > We can browse through multiple font styles. (But to use this we need to first web link its org source)
+
+    > text-align: start;   text-align: end;
+
+    > visibility : hidden;   it reserves spaces even if its hidden unlike none
+
+    > text-transform:  
+
+        > text-transform: uppercase;
+        > text-transform: lowercase;
+        > text-transform: capitalize;
+        > text-transform: uppercase;
+
+    > display - it controls the visibility of the elements
+        > display: none; - it will hide the element
+        > display: inline; - it converts block level element to inline element but width property will not apply.
+        > display: inline-block - it converts block level element to inline element but width property will apply.
+        > display: block - it converts from inline to block level element
+
+
+    > positioning  (position1.html)
+
+        >   position: fixed;
+            bottom: 0px;         
+            width: 100%;     -> it means that position of element will be fixed at end of webpage from bottom with 0px gap.
+
+        >   top: 0px;
+            position: sticky;  -> from top if there is 0% gap then element will stick to top of webpage. 
+
+        >   position: static;    -> by default position is static for all HTML document
+
+        >   Position Absolute:
+
+                position: absolute;
+                top: 15%;
+                left: 10%;
+
+                > Z-index: (another aspect of position absolute)
+                  
+                  z-index: 1;
+                  z-index: -1;
+
+
+        >   Position Relative: position: relative;    > Position relative to default position
+
+            Example:
+
+            position: relative;
+            left: 10px;
+            top: 10px;
+
+-----------------------------------------------------------------------------
+
+> Four main ways of creating a responsive websites:
+		1. Media Queries
+		2. CSS grid
+		3. CSS Flexbox
+		4. External Framework (Eg.. Bootstrap)
+
+-----------------------------------------------------------------------------
+
+> Media Queries: mediaquery1.html  (witten in CSS part only)
+
+        /*Media Query for extra small screen device*/
+
+        @media screen and (min-width: 1px) and (max-width:600px) {
+            h1 {
+                font-size: 35px;
+            }
+
+            
+            section {
+                grid-template-columns: auto;
+            }
+        }
+
+        /*Media Query for small screen device*/
+
+        @media screen and (min-width: 601px) and (max-width:800px) {
+            h1 {
+                font-size: 50px;
+            }
+
+            
+            section {
+                grid-template-columns: auto auto;
+            }
+        }
+
+        /*Media Query for medium screen device*/
+
+        @media screen and (min-width: 801px) and (max-width:1000px) {
+            h1 {
+                font-size: 65px;
+            }
+
+            section {
+                grid-template-columns: auto auto auto;
+            }
+        }
+
+---------------------------------------------------------------------------------------
+> Standard Screen Size Resolution of devices:
+---------------------------------------------------------------------------------------
+
+    1. 320px to 480px - mobile device
+    2. 481px to 768px - iPad, Tablets
+    3. 761px to 1024px - small screen, laptop
+    4. 1025px to 1200px - desktop, large screen
+    5. 1201px to more - Extra large, screen, TV
+
+---------------------------------------------------------------------------------------
+ > display: grid - used to make layout of webpage (display5.html)
+ -------------------------------------------------------------------------------------
+
+        > grid-template-columns: auto auto auto; -> going to create three columns in each row ( the no auto you write you will get that many columns)
+        > grid-template-columns: 25% 75%; -> the first element will take 25% of the screen width and second element will occupy 75%.
+
+        > grid-template-rows: auto auto auto; -> going to create three rows ( the no auto you write you will get that many columns)
+        > grid-template-rows: 25% 75%;  -> the first element will take 25% of the screen height and second element will occupy 75%.
+
+        > grid-template-columns: repeat(3, auto); -> instead of writing auto three time we can use repeat function to do the same.
+
+        > In a single line we can write a property for both rows and columns:
+
+            grid-template: rows/columns;
+        Eg: grid-template: 200px 200px / 400px 600px;  (use when reqd not all the time)
+
+        > grid-column: span 2;   > used for merging two columns
+        > grid-row: span 2;    > > used for merging two rows
+
+        > gap: 30px;   > means there should be 30px gap between each row and column.
+   
+	NOTE: while using flex and grid then content must be inside a parent element.
+
+-----------------------------------------------------------------------------
+> Flexbox:  (needs to be written for parent element)
+----------------------------------------------------------------------------
+
+        > display: flex;   -> the data will be displayed inline format (mandatory then only below properties will work)
+        > justify-content: center;  -> the data will be displayed in the center  (width)
+        > justify-content: flex-start;  -> the data will be displayed in the left  (width)
+        > justify-content: flex-end;  -> the data will be displayed in the end  (width)
+        > justify-content: space-between;  -> there will be space created between child div's inside parent div element.   (width)
+        > align-items: center;   -> items will be placed in center horizontally
+        > align-items: start;   -> items will be placed in top horizontally
+        > align-items: end;   -> items will be placed in bottom horizontally
+        > align-self: start;    -> this property will be wriiten in child item selector to place item on top horizontally
+        > align-self: center;    -> this property will be wriiten in child item selector to place item on center horizontally
+        > align-self: end;      -> this property will be wriiten in child item selector to place item on bottom horizontally
+        
+
+        > flex: 1;   -> if width of elements are not mentioned, then it allocates equal width with gaps between them.
+        > flex: 2;   -> if width of elements are not mentioned, then it shall allocate twice the width of flex:1;
+        > flex: 0.5;  -> -> if width of elements are not mentioned, then it shall allocate half the width of flex:1;
+
+	> gap: 30px;   > means there should be 30px gap between each row and column. (works same as in grid)
+
+        Example:
+            #topar {
+                display: flex;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .one {
+                background: skyblue;
+                flex: 1;
+            }
+
+            .two {
+                background: lightcyan;
+                flex: 2;
+            }
+
+            .three {
+                background: lightgreen;
+                flex: 1;
+            }
+
+    > Flex-direction:
+
+        > flex-direction: row; > (default) thats why content prints in inline from left to right.
+        > flex-direction: column;  > content will be in block fashion. (if we want to control the columns)
+        > flex-direction: row-reverse;
+        > flex-direction: column-reverse;
+
+        > Here in normal condition, row is main axis and column is cross axis.
+          But if we can flex direction to column, it shall affect the height of an element rather than width.  (main axis becomes cross axis)
+
+        > flex-basis: 400px;   >> used to set the width of the element.
+
+    > Flex Layout:
+
+        > order: 10;  > this property written in child selector which defines the order of flex items (its always ascending to descending order)
+        > flex-wrap: wrap; -> If the content exceeds the screen width then the content will move to next line.
+                                content will arrange automatically according to screen size ( on multiple devices) --display6.html
+        > flex-wrap: nowrap/wrap-reverse;
+
+>> NOTE :
+        > Flexbox is good to use when we want to align our items in 1D alignment.
+        > Grid is good to use when we want to align our items in 2D layouts.
+        > If required we can use both together.
+
+----------------------------------------------------------------------------
+> CSS Transition:
+----------------------------------------------------------------------------
+
+> Enable us to define the transition between two states of an element.  Eg: :hover, :focus, :active (press and hold mouse key)
+
+    > transition-property: all;    > applies transition to all properties of an element
+    > transition-duration: 2s;    > duration of transition
+    > transition-timing-function: ease-in/ ease-out/ linear/ steps;      > these are styles (refer to MDN for more)
+    > transition-delay: 2s;    > applies transition after delay of 2s
+
+> Shorthand (shortcut):
+
+    We can write all of them in a single line:
+
+    > transition: font-size 2s ease-in-out 0.2s;
+
+----------------------------------------------------------------------------
+> CSS Transform:
+----------------------------------------------------------------------------
+
+1. rotate:
+
+    > transform: rotate(45deg);   > rotate 45 deg right side
+
+2. scale: (once transition happens it shall extend by scale value)
+
+    > transform: scale(2);     > by default it shall be one
+    > transform: scale(1,2);   > (x,y) axis
+    > transform: scaleX(2);    > x-axis
+    > transform: scaleY(2);    > y-axis
+
+3. translate:
+
+    > transform: translate(20px,50px);    >(x,y)
+    > transform: translateX(20px); 
+    > transform: translateY(20px); 
+
+----------------------------------------------------------------------------
+> Animation : animation1.html, animation2.html  (animation is witten in CSS part only)
+----------------------------------------------------------------------------
+
+    Animation Template:
+
+    > Template 1:  @keyframes myName {
+                    from {font-size:20px;}
+                    to {font-size:40px;}
+                    }
+
+    > Template 2:  @keyframes myName {
+                    0%{font-size:20px;}
+                    50% {font-size:30px;}
+                    }
+
+    Animation properties:
+
+    > animation-name: myName;      > name of the animation
+    > animation-duration: 3s;     > duration of the animation
+    > animation-timing-function: ease-in;    > Search in MDN docs for more
+    > animation-delay: 1s;
+    > animation-iteration-count: 1;
+    > animation-direction: normal;     [imp for portfolio] > Search in MDN docs for more
+
+
+> Shorthand (shortcut):
+
+    > animation: myName 2s linear 3s infinite normal;
+
+
+    Example-1: 
+        /* CSS Animation*/
+
+        @keyframes myanimation {
+            25% { 
+                background: cyan; 
+                font-size:30px;
+            }
+            50% { 
+                background: lightcoral; 
+                font-size:60px;
+            }
+            75% { 
+                background: lightslategray; 
+                font-size:90px;
+            }
+        }
+
+        section {
+            background: skyblue;
+            color: white;
+            font-size: 100px;
+            text-align: center;
+            padding: 100px;
+            height: 300px;
+            animation: myanimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+
+----------------------------------------------------------------------------
+Background Blending in CSS:
+-------------------------------------------------------------------------------
+    Example:
+
+
+    background-image: linear-gradient(40deg, #fa0252 , orangered), url(snow.JPG);
+    background-size: 100% 110%;
+    background-blend-mode: overlay;
+
+    background-image: linear-gradient(40deg, #fa0252 , orangered), url(snow.JPG);
+    background-size: 100% 110%;
+    ackground-blend-mode: screen;
+
+    background-image: linear-gradient(40deg, #fa0252 , orangered), url(snow.JPG);
+    background-size: 100% 110%;
+    background-blend-mode: multiply;
+
+
+-----------------------------------------------------------------------------
+>   Additional Property and value List :
+-----------------------------------------------------------------------------
+
+    > font-size: 40px; -- we can set the font size of the text
+    > color: white; -- we can set the text color
+    > text-align: center; -- aligns the text to center
+    > font-style: italic; -- we can change the font style as per our needs
+    > font-family: Verdana; -- select various types of fonts
+    > list-style-type: none; -- bullet points are removed in the list of details (circle, sqaure.....)
+    > text-decoration: underline; -- underlines the text
+    > text-decoration: none;  -- Underline of the hyperlink shall be removed
+    > selector: hover   -> used inside style tag :: when we place cursor on the hyperlink it get hilighted as blue color.
+        cursor: pointer; -> the cursor turns to pointer once place on a element
+    > font-weight: bold; -> property to bold the text 
+    > text-align: justify; --> distribute text in paragraph evenly between margins
+    > html {
+            scroll-behavior: smooth;
+        }                                   --> scroll will happen smoothly when user wants to move to different section in same webpage.
+                                                                (template1.html)
+
+    > !important -- it is property used to overwrite existing property of h1 with new value for all browsers.
+    > line-height: 34px; -- adds spacing between lines of paragragh etc...
+    > border-radius: 51%; or border-radius: 50px; -- chops off the edges of a border (reshape to circle etc...)
+
+    >   <fieldset>
+            <legend> <i class="fa fa-headset fa-1x"> </i> </legend>
+        </fieldset>  -- legend will apply heading of the block, fieldset will create a block 
+
+    >   button:focus{
+        background: red;
+        }    -- once we click the button, background button color becomes red
+
+   
+    > object-fit: cover;    /* Covers the full screen with video*/ used for video element CSS
+    > z-index: 99;    /* this element goes over the other elements */
+
+--------------------------------------------------------------------------------
+>   Additional information :
+--------------------------------------------------------------------------------
+
+-- <div> div is used to divide page into multiple blocks </div>
+   (it is block level tag)
+
+
+-- favicon.io :
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"  />
+
+     The above line is used in CSS to give a logo beside the title of the webpage.
+     login to favicon.io website and make your own small logo.
+     then download the image and extract only the ".ico" file.
+     Add the path of the image in href and done.
+
+-- For the styling of the page to look similar on mobile as it does on a desktop or laptop, 
+    you need to add a meta element with a special content attribute.
+
+        Syntax: 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+--  Comments in CSS look like this:  /* comment here */
+
+-- you want to center the div horizontally. You can do this by setting its margin-left and margin-right properties to auto.
+
+-- article elements commonly contain multiple elements that have related information.
+
+
+--  Now you need to link the styles.css file so the styles will be applied again. 
+    Nest a self-closing link element in the head element. Give it a rel attribute 
+    value stylesheet and an href attribute value of styles.css.
+
+        Eg:
+        <head>
+            <meta charset="utf-8" />
+            <title>Cafe Menu</title>
+            <link rel="stylesheet" href="styles.css"/>
+        </head>
+
+
+-- <header> &ltheader&gt</header> -- is used to print output as <header> (with the angled brackets inside a header tag)
+
+-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   This above link is used in head element (no need to remember the link)to link to server to make use of multiple features of a library.
+
+-- With below property we can outline an icon and make background of the icon as transparent:
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+
+-- Adding a symbol filled with color in background :
+        clip-path: polygon(0 0, 0% 100%, 100% 0 );
+        background: #44c7f5;
+
+
+-- https://fontawesome.com/ :: to check the available icons which we can use.
+        normal syntax: <i class="fa fa-building fa-2x">  </i>
+    for brand icons use this syntax: <i class="fab fa-facebook fa-10x">  </i>
+
+    this above statements will be used for Icons in HTML part not is CSS section.
+
+-- NOTE: ANy changes being made to code in Chrome developer tool will not affect the source code.
+
+-- CSS Color Palet:
+    https://palettes.shecodes.io/palettes/545
+
+
+-- CSS icon library:
+    https://fontawesome.com/ 
+
+
+-- Identify color HEX code:
+    https://imagecolorpicker.com/en
+
+
+-- Select various types of fonts (CSS):
+    https://www.tutorialbrain.com/css_tutorial/css_font_family_list/
+
+
+--------------------------------------------------------------------------------
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+

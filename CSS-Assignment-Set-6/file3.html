@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 6 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body {
+            margin: 0px;
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
+
+        .block1 {
+            background: #0fb8a9;
+            height: 747px;
+            
+        }
+
+        .block2 {
+          
+            height: 690px;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .topar {
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;           
+            margin-top: 100px;
+            margin-bottom: 40px;
+        }
+
+        .midar {
+            width: 60%;
+            color: white;
+            font-size: 19px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+        }
+
+        .butt1 {
+            height: 60px;
+            width: 260px;
+            font-size: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 175px;
+            border-radius: 30px;
+            border: 2px solid white;
+            background: #0fb8a9;
+            color: white;
+        }
+
+        .topal {
+            color: #20b3a4;
+            font-size: 40px;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;           
+            margin-top: 110px;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            padding-left: 350px;
+            margin-bottom: 50px;
+        }
+
+        ul li {
+            display: inline;
+            margin: 14px;
+            border: 1px solid rgb(210, 210, 210);
+            border-radius: 51%;
+            font-size: 20px;
+            
+           
+        }
+
+        .con1 {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 19px;
+            padding-right: 15px;
+        }
+
+        .con2 {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 10px;
+        }
+
+        .con3 {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 17px;
+            padding-right: 16px;
+        }
+
+        .mid1ar {
+            color: rgb(210, 210, 210);
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #midarea {
+            padding-left: 200px;
+        }
+
+        .cont101 {
+            padding-left: 45px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            height: 46px;
+            width: 460px;
+            margin-bottom: 16px;
+            background: #ecfbec;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            color: rgb(210, 210, 210);
+            border: none;
+        }
+
+        .formf {
+            position: relative;
+        }
+
+        .icon {
+            position: absolute;
+            padding-top: 19px;
+            padding-left: 16px;
+            color: grey;
+        }
+
+        .butt2 {
+            height: 60px;
+            width: 260px;
+            font-size: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 135px;
+            border-radius: 30px;
+            border: 2px solid white;
+            background: #0fb8a9;
+            color: white;
+            margin-top: 15px;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <div class="block1"> 
+        <img src="icoon.JPG"/>    
+        <p class="topar"> Welcome Friend</p>
+
+        <p class="midar"> To keep connected with us please login with your personal info. </p>
+
+        <button class="butt1"> SIGN IN </button>
+    </div>
+
+    <div class="block2"> 
+        <p class="topal"> Create Account</p>
+        <p> 
+            <ul>
+                <li class="con1"> <i class="fab fa-facebook-f fa-1x">  </i> </li>
+                <li class="con2"> <i class="fab fa-twitter fa-1x"> </i> </li>
+                <li class="con3"> <i class="fab fa-instagram fa-1x"> </i> </li>
+            </ul>
+        </p>
+
+        <p class="mid1ar"> or use your email for registration </p>
+
+        <div id="midarea">
+            
+            <div class="formf">
+                <i class="fa-solid fa-user fa-1x icon"> </i>
+                <input type="text" placeholder="Name" class="cont101"/> 
+            </div>
+
+            <div class="formf">
+                <i class="fa-solid fa-envelope fa-1x icon"> </i>
+                <input type="text" placeholder="Email" class="cont101"/> 
+            </div>
+
+            <div class="formf">
+                <i class="fa-solid fa-unlock fa-1x icon"> </i>
+                <input type="text" placeholder="password" class="cont101"/> 
+            </div>
+            
+            <button class="butt2"> SIGN UP </button>
+
+        </div>
+
+    </div>
+    
+
+</body>
+</html>
+
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 6 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body {
+            margin: 0px;
+            background: #38b4e4;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            
+        }
+
+        #block1 {
+            background: white;
+            width: 60%;
+            height: 500px;
+            margin-top: 110px;
+            margin-left: 190px;
+            box-shadow: -10px -10px 12px grey;
+        }
+      
+        #block2 {
+            background: white;
+            width: 60%;
+            height: 500px;
+            margin-top: 110px;
+            margin-left: 10px;
+            box-shadow: -10px -10px 12px grey;
+        }
+
+        #topar {
+            width: 75%;
+            height: 60px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .data1 {
+            border: 3px solid #38b4e4;
+            background: white;
+            font-family: Arial;
+            font-weight: bold;
+            margin-top: 40px;
+            color: black;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            font-size: 18px;
+        }
+
+        .data2 {
+            border: 3px solid #38b4e4;
+            background: #38b4e4;
+            margin-top: 40px;
+            color: white;
+            font-family: Arial;
+            font-weight: bold;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            font-size: 18px;
+        }
+
+        .data4 {
+            border: 2px solid #38b4e4;
+            background: white;
+            font-family: Arial;
+            font-weight: bold;
+            margin-top: 40px;
+            color: black;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            font-size: 18px;
+        }
+
+        .data3 {
+            border: 3px solid #38b4e4;
+            background: #38b4e4;
+            margin-top: 40px;
+            color: white;
+            font-family: Arial;
+            font-weight: bold;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            font-size: 18px;
+        }
+
+        .imp1, .imp2 {
+            color: white;
+        }
+
+        .back1 {
+            background: #4094d4;
+            width: 33%;
+            height: 42px;
+            margin-left: 70px;
+            text-align: center;
+            padding-top: 13px;
+            
+         
+        }
+
+        .back2 {
+            background: #cc844c;
+            width: 33%;
+            height: 42px;
+            margin-left: 70px;
+            text-align: center;
+            padding-top: 13px;
+            margin-left: 30px;
+        }
+
+        #midar {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 71%;
+            height: 60px;
+            background: white;
+            border: 3px solid #9cbcc6;
+            margin-left: 63px;
+            border-radius: 18px;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 12px #d1f7fc;
+        }
+
+        .butt1 {
+            width: 75%;
+            height: 60px;
+            background: #4094d4;
+            border: none ;
+            margin-left: 63px;
+            border-radius: 18px;
+            padding-left: 18px;
+            color: white;
+            font-size: 21px;
+            font-family: Arial;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+   
+    <div id="block1">
+
+        <div id="topar">
+            <div class="data1"> SIGN IN </div>
+            <div class="data2"> SIGN UP </div>
+        </div>
+
+        <div id="midar">
+            <div class="back1">
+                <i class="fab fa-facebook-f fa-2x imp1"> </i>
+            </div>
+    
+            <div class="back2">
+                <i class="fab fa-google fa-2x imp2"> </i>
+            </div>
+        </div>
+
+        <input type="email" placeholder="E-mail"/> <br/> <br/>
+        <input type="password" placeholder="Password"/> <br/> <br/>
+
+        <button class="butt1"> SIGN IN </button>
+    </div>
+
+
+    <div id="block2">
+        <div id="topar">
+            <div class="data3"> SIGN IN </div>
+            <div class="data4"> SIGN UP </div>
+        </div>
+
+        <input type="text" placeholder="Username"/> <br/> <br/>
+        <input type="email" placeholder="E-mail"/> <br/> <br/>
+        <input type="password" placeholder="Password"/> <br/> <br/>
+
+        <button class="butt1"> SIGN UP </button>
+
+    </div>
+</body>
+</html>
+
+

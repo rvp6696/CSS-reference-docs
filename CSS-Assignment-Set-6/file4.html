@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 6 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        
+        body{
+            background: #eaeff4;
+            
+        }
+
+        section {
+            display: flex;
+            background: white;
+            width: 70%;
+            height: 550px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 120px;
+        }
+
+        #block1 {
+            width: 60%;
+            clip-path: polygon(0 0, 0% 100%, 100% 0 );
+            background: #44c7f5;
+            padding-top: 20px;
+            padding-left: 40px;
+        }
+
+        #block2 {
+           
+            width: 40%;
+            margin-left: -8%;
+        }
+
+        .ld1 {
+            font-size: 50px;
+            color: white;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+        .ld2 {
+            margin-top: -20px;
+            font-size: 25px;
+            color:white;
+            font-family: Arial;
+            margin-bottom: 20px;
+        }
+
+        .butt1 {
+            height: 55px;
+            width: 140px;
+            color: white;
+            background: #44c7f5;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 20px;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        .red {
+            color: red;
+            margin-left: -4px;
+        }
+
+        .rd1 {
+            padding-top: 50px;
+            font-family: Arial;
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(57, 57, 57);
+        }
+
+        .rd2 {
+            margin-top: -10px;
+            font-family: Arial;
+            font-size: 25px;
+            margin-bottom: 10px;
+            color: rgb(93, 92, 92);
+        }
+
+        input {
+            width: 80%;
+            height: 50px;
+            background: white;
+            padding-left: 10px;
+            border-radius: 30px;
+            color: rgb(93, 92, 92);
+            font-size: 20px;
+            font-family: Arial;
+        }
+
+        .butt2 {
+            height: 55px;
+            width: 84%;
+            color: #44c7f5;
+            background: white;
+            border: 2px solid #44c7f5;
+            border-radius: 30px;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .lastd {
+            color: #44c7f5;
+            font-family: Arial;
+            font-size: 20px;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+        <section>
+            <div id="block1">  
+                <p class="ld1"> Welcome Back</p>
+                <p class="ld2"> Create Your Account. <br/> It's totally free. </p>
+
+                <button class="butt1"> SIGN UP </button>
+            </div>
+
+
+            <div id="block2"> 
+                <form>
+
+                    <p class="rd1"> Login </p>
+                    <p class="rd2"> Username or email address <label class="red">*</label> 
+                        <input type="text email" placeholder="Username or Email"/>
+                    </p>
+                    <br/>
+                    <p class="rd2"> Password <label class="red">*</label> 
+                        <input type="text email" placeholder="Password"/>
+                    </p>
+                    
+                    <button class="butt2"> Sign In </button>
+
+                    <p class="lastd"> Forgot Password? </p>
+
+                </form>
+            
+            </div>
+
+
+        </section>
+</body>
+</html>
+
+

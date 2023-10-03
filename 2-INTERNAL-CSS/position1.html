@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Positioning example  </title>
+    <style>
+        body {
+            min-height: 2000px;
+            margin: 0px;
+        }
+
+        footer {
+            background: blue;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 20px;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+        }
+
+        #topnav {
+            background: red;
+            text-align: center;
+            color: white;
+            margin: 0px;
+            top: 0px;
+            position: sticky;
+        }
+
+        #topnav li {
+            display: inline-block;
+            font-size: 25px;
+            padding: 20px 40px 20px;
+        }
+
+        #help {
+            padding: 5px 10% 5px;
+            background: darkblue;
+            color: white;
+            display: grid;
+            grid-template-columns: 70% 30%;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+            font-size: 70px;
+        }
+        
+       #service {
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+       }
+
+       #service div {
+        margin: 30px;
+        color: blue;
+        font-size: 40px;
+       }
+
+       #topnav li:hover {
+        color: palevioletred;
+        cursor: pointer;
+       }
+
+    </style>
+</head>
+
+<body>
+
+    <section id="help">
+        <p> Help Center - 8884166608 </p>
+        <p> Address - Marathahalli Bangalore </p>
+    </section>
+    <ul id="topnav">
+        <li> Home </li>
+        <li> About Us </li>
+        <li> Contact Us </li>
+        <li> Our Services </li>
+        <li> Login </li>
+        <li> Register </li>
+    </ul>
+
+    <h1> Welcome Home </h1>
+
+    <section id="service"> 
+        <div> Software </div>
+        <div> Marketing </div>
+        <div> Education </div>
+        <div> Employment </div>
+        <div> Bangalore </div>
+        <div> Mangalore </div>
+        <div> Pune </div>
+        <div> Delhi </div>
+        <div> Chennai </div>
+        <div> Kolkata </div>
+        <div> Patna </div>
+    </section>
+
+    <footer> This is from footer.....</footer>
+</body>
+
+</html>

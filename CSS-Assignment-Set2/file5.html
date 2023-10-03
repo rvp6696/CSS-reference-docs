@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 2 </title>
+</head>
+
+<style>
+
+    body {
+        margin: 0%;
+    }
+
+    #first {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        width: 100%;
+        height: 755px;
+       
+    }
+
+    #block1 {
+        background: #596e79;
+        padding-top: 280px;
+        padding-bottom: 220px;
+        padding-right: 50px;
+    }
+
+    .set1 {
+        font-size: 50px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        text-align: right;
+    }
+
+
+    .set2 {
+        font-size: 30px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: #8b989f;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    #second {
+        display: grid;
+        grid-template-columns: 33% 67%;
+        padding-left: 10px;
+        margin-left: 30px;
+    }
+   
+    .set3 {
+        font-size: 15px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        color: white;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-right: 13px;
+        padding-left: 13px;
+        border: 3px solid #a1b8c8;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .head1 {
+        font-size: 14px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+        margin-left: 50px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        color: rgb(150, 148, 148);
+    }
+
+    .head2, .head4 {
+        font-size: 35px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-align: left;
+        margin-left: 50px;
+        margin-bottom: 15px;  
+        width: 1080px;
+    }
+
+    .head2 img {
+        background-image: url(pic1.JPG);
+        background-size: 100% 100%;
+        height: 70px;
+        width: 70px;
+        border-radius: 51%;
+        float: right;
+    }
+
+    .head4 img {
+        background-image: url(pic2.JPG);
+        background-size: 100% 100%;
+        height: 70px;
+        width: 70px;
+        border-radius: 51%;
+        float: right;
+    }
+
+    .head3 {
+        font-size: 14px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+        color: rgb(150, 148, 148);
+        margin-left: 50px;
+        margin-bottom: 15px;  
+        width: 1080px;
+    }
+
+    #block2 {
+        width: 1100px;
+    }
+
+    .high {
+        color: rgb(0, 115, 255);
+    }
+
+    .mid1 {
+        background: green;
+        color: white;
+        text-align: center;
+        padding: 3px 12px 3px;
+    }
+
+    .mid2 {
+        background: blue;
+        color: white;
+        text-align: center;
+        padding: 3px 12px 3px;
+    }
+
+    .mid3 {
+        background: red;
+        color: white;
+        text-align: center;
+        padding: 3px 12px 3px;
+    }
+
+    p {
+        margin-left: 50px;
+        margin-bottom: 15px; 
+        font-size: 20px;
+        line-height: 34px;
+        margin-bottom: 70px;
+    }
+
+
+    
+</style>
+
+<body>
+  
+    <section id="first">
+        <div id="block1"> 
+            
+            <div class="set1"> A SAMPLE BLOG </div>
+            <div class="set2">  Creating a blog <br /> layout using Pure </div>
+            
+            <section id="second">
+                <div class="set3"> PURE </div>
+                <div class="set3"> YUI LIBRARY </div>
+            </section>
+        </div>
+
+
+        <div id="block2"> 
+
+            <div class="head1"> PINNED POST </div>
+            <div class="head2"> Introducing Pure  <img />  </div>
+            <div class="head3"> By <label class="high"> Tilo Mitra </label> under 
+                <label class="mid1">  CSS  </label> &nbsp
+                <label class="mid2">  Pure  </label>
+            </div>
+
+            <p>
+                Pure.css is an incredibly lightweight CSS library. The <label class="high"> entire library clocks in at </label> only 4.0kb, when its zipped. Despite its small size, Pure.css offers a complete suite of CSS tools. It has CSS tools for everything from tables to buttons to grids and forms. As seen below, a default inline form is created by adding the class name pure-form to any form element.
+            </p>
+
+            <div class="head1"> RECENT POST </div>
+            <div class="head4"> Everythig you need to know about Grunt <img /> </div>
+            <div class="head3"> By <label class="high"> Eric Ferraluolo </label> under 
+                <label class="mid3">  Javascript  </label> 
+            </div>
+
+            <p>
+                Ian is the one everyone is watching, it is expected to rapidly strengthen by the start of next week, and then around Wednesday-Thursday, make landfall in Florida, it is too far out to say how strong Ian will be by then, but it currently forecasted to be near Major Hurricane strength at landfall Thursday morning. Gaston and Hermine, well not too much to talk about, Gaston brought Tropical Storm force winds to the Azores, Gaston is expected to be Post-tropical by tonight, while Hermine is bringing heavy rain to the Canary Islands, it is expected to weaken by tonight and become post-tropical by Sunday.
+            </p>
+
+        </div>
+    </section>
+ 
+</body>
+</html>

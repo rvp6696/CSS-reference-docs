@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 6 </title>
+
+    <style>
+        
+        body {
+            background: skyblue;
+        }
+
+        section {
+            background: white;
+            margin-top: 150px;
+            width: 35%;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 95% 5%;
+        }
+
+        .topa {
+            font-size: 25px;
+            color: #1F75FE;
+            font-family: Arial;
+            font-weight: 700;
+            padding-top: 30px;
+            padding-left: 50px;
+            margin-bottom: 6px;
+        }
+
+        label {
+            color: grey;
+            font-size: 12px;
+            font-family: Arial;
+            font-weight: bold;
+            padding-left: 50px;
+            letter-spacing: 1px;
+        }
+
+        #block2 {
+            background: #1F75FE;
+        }
+        
+        input.high1 {
+            width: 385px;
+            height: 33px;
+            margin-left: 50px;
+            background: rgb(218, 218, 218);
+            border: none;
+            border-radius: 4px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+
+        input[type=checkbox] {
+            margin: 4px 0 0;
+            line-height: normal;
+            width: 10px;
+            height: 10px;
+            margin-left: 50px;
+        }
+
+        .text1 {
+            color: #1F75FE;
+            font-size: 10px;
+            
+        }
+
+        .text2 {
+            font-size: 10px;
+            margin-left: -45px;
+            margin-right: 13px;
+        }
+
+        .butt1 {
+            margin-top: 20px;
+            margin-left: 50px;
+            background: #1F75FE;
+            width: 385px;
+            height: 40px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .bottoma {
+            color: white;
+            font-size: 40px;
+            padding-top: 3px;
+            padding-left: 5px;
+            filter: brightness(70%);
+        }
+    </style>
+    
+</head>
+<body>
+
+    <section>
+        <div> 
+            <p class="topa"> ACCOUNT LOGIN</p>
+        <br/>
+
+        <label> USERNAME </label>
+        <input type="text" class="high1"/>
+
+        <br/>
+        <br/>
+
+        <label> PASSWORD </label>
+        <input type="password" class="high1"/>
+
+        <br/>
+        <input type="checkbox" class="high2"/> <label class="text2"> Remember Me </label>
+        &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; 
+        <label class="text1"> Forgot Password?</label>
+
+        <button class="butt1"> LOG IN</button>
+
+        </div>
+
+        
+
+        <div id="block2"> 
+            <p class="bottoma"> || </p>
+            
+        </div>
+        
+    </section>
+
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Animation example </title>
+    </head>
+
+    <style>
+        body{
+            margin: 0px;
+        }
+
+        /* CSS Animation*/
+
+        @keyframes myanimation {
+            25% { 
+                background: cyan; 
+                font-size:30px;
+            }
+            50% { 
+                background: lightcoral; 
+                font-size:60px;
+            }
+            75% { 
+                background: lightslategray; 
+                font-size:90px;
+            }
+        }
+
+        section {
+            background: skyblue;
+            color: white;
+            font-size: 100px;
+            text-align: center;
+            padding: 100px;
+            height: 300px;
+            animation: myanimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+
+<body>
+    <section>  
+        CSS Simple Animation !..
+    </section>
+</body>
+</html>

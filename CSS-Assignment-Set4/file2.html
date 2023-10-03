@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CSS Set 4 </title>
+    <style>
+        body {
+            padding-top: 80px;
+            background: rgb(235, 234, 234);
+            
+        }
+        
+        section {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            box-shadow: -2px 2px 15px black;
+            width: 900px;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            
+        }
+
+        .heading {
+            padding-top: 60px;
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        ul {
+            padding-left: 110px;
+        }
+
+        ul li {
+            display: inline;
+            margin: 14px;
+            border: 2px solid #79c2d0;
+            border-radius: 51%;
+            font-size: 20px;
+            
+           
+        }
+
+        .con1 {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 19px;
+            padding-right: 15px;
+        }
+
+        .con2 {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 10px;
+        }
+
+        .con3 {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 17px;
+            padding-right: 16px;
+        }
+
+        #middle {
+            padding: 26px;
+            text-align: center;
+        }
+
+        .data {
+            width: 335px;
+            height: 30px;
+            margin: 10px;
+            background: rgb(237, 236, 236);
+            border: 3px solid white;
+        }
+        
+        div input[placeholder="User Email"], input[placeholder="Password"] {
+            padding-left: 15px;
+            padding-top: 8px;
+            padding-bottom: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .bottom {
+            margin-top: -6px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 19px;
+        }
+
+        #bottom {
+            text-align: center;
+        }
+
+        .butt {
+            margin-bottom: 90px;
+            padding: 15px 50px 15px;
+            background: #01c3c7;
+            color: white;
+            font-weight: bold;
+            border: 2px solid white;
+            font-size: 17px;
+            border-radius: 30px;
+        }
+
+        #right {
+            text-align: center;
+            background: #01c3c7;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .block1 {
+            padding-top: 150px;
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+
+        .block2 {
+            font-size: 19px;
+            margin-top: -5px;
+            color: white;
+            padding-bottom: 17px;
+        }
+
+        #left {
+            background: white;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            
+        }
+
+    </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+       
+    <section> 
+        <div id="left"> 
+            <p class="heading"> Sign in </p>
+            <p> 
+                <ul>
+                    <li class="con1"> <i class="fab fa-facebook-f fa-1x">  </i> </li>
+                    <li class="con2"> <i class="fab fa-google-plus-g fa-1x"> </i> </li>
+                    <li class="con3"> <i class="fab fa-linkedin-in fa-1x"> </i> </li>
+                </ul>
+            </p>
+
+            <div id="middle"> 
+                <input type="email" placeholder="User Email" class="data"/> <br />
+                <input type="password" placeholder="Password" class="data"/>
+            </div>
+
+            <div id="bottom"> <p class="bottom"> Forgot your password? </p> 
+                <button class="butt"> SIGN IN </button>
+            </div>
+
+        </div>
+        <div id="right"> 
+            <p class="block1"> Sign UP </p>
+
+            <p class="block2"> Sign-up here if you don't have account </p>
+
+            
+                <button class="butt"> SIGN UP </button>
+           
+
+        </div>
+    </section>
+
+</body>
+</html>
+
+

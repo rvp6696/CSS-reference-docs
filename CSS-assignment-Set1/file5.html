@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Set 1 </title>
+        <style>
+
+            header, footer, nav {
+                font-size: 20px; 
+                width: 900px;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+                border: 1px solid black;
+                padding: 30px 0px 12px;
+            }
+
+            .upper {
+                margin-bottom: 0px;
+                padding: 13px 0px 6px;
+            }
+
+            .middle {
+                margin-bottom: 0px;
+                padding: 9px 0px 6px;
+            }
+
+            .bottom {
+                margin-top: 0px;
+                padding: 10px 0px 10px;
+            }
+
+            #set1 {
+                margin: 20px 0px 0px;
+                display: grid;
+                grid-template-columns: 25% 75%;
+                font-size: 20px;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+                width: 900px;
+            }
+
+            #set2 {
+                display: grid;
+                grid-template-columns: 18% 64% 18%;
+                font-size: 20px;
+                text-align: center;
+                width: 900px;
+                margin-left:auto;
+                margin-right: auto;
+            }
+
+            #set3 {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                font-size: 20px;
+                text-align: center;
+                width: 576px;
+                margin-left:auto;
+                margin-right: auto;
+            }
+
+            #block1 {
+                border: 0.5px solid black;
+                margin: 0px; 
+                padding-top: 15px;
+                padding-bottom: 260px;
+                padding-left: 30px;
+                padding-right: 30px;              
+            }
+
+            #block2 {
+                border: 1px solid black;
+                margin: 0px; 
+                padding-top: 15px;
+                padding-bottom: 260px;
+                padding-left: 20px;
+                padding-right: 20px;    
+            }
+
+            #block3 {
+                border: 1px solid black;
+                margin: 0px; 
+                padding-top: 12px;
+                padding-bottom: 5px;
+                padding-left: 30px;
+                padding-right: 30px;    
+            }
+
+            #block4 {
+                border: 1px solid black;
+                margin: 0px; 
+                padding-top: 12px;
+                padding-bottom: 5px;
+                padding-left: 70px;
+                padding-right: 50px;    
+            }
+
+            .block5 {
+                border: 1px solid black;
+                margin: 0px; 
+                padding: 33px 0px 32px;
+                
+            }
+
+            .block6 {
+                border: 1px solid black;
+                margin: 0px; 
+                padding: 50px 0px 50px;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <section id="set1">
+            <div id="block3"> Header Logo </div>
+            <div id="block4"> Header Banner </div>
+        </section>
+
+        <header class="upper"> Header Bar </header>
+
+        <nav class="middle"> </nav>
+
+        <section id="set2">
+            <div id="block1"> Left Blocks </div>
+            <div > 
+                <div class="block5"> Center-Center Blocks </div>
+                <div>
+                    <section id="set3">
+                        <div class="block6"> Center-Left Blocks </div> 
+                        <div class="block6"> Center-Right Blocks </div> 
+                    </section>
+                </div>
+                <div class="block5"> Module Coments</div>            
+            </div>
+            <div id="block2"> Right Blocks </div>          
+        </section>
+        <nav class="middle"> </nav>
+        
+        <footer class="bottom"> Footer Bar </footer>
+    </body>
+</html>

@@ -1,0 +1,353 @@
+
+body {
+    margin: 0px;
+}
+
+h1 {
+    font-size: 70px;
+    color: orangered;
+    text-align: center;
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+    min-height: 500px;
+    
+}
+
+footer {
+    padding: 30px;
+    background: darkcyan;
+    color: white;
+    text-align: center;
+    height: 130px;
+    font-size: 20px;
+}
+
+ul {
+    background-image: linear-gradient(to left , purple, darkred);
+    margin: 0px;
+    text-align: center;
+    position: sticky;
+    top: 0px;
+}
+
+ul li {
+    display: inline-block;
+    padding: 15px 40px 15px;
+    
+}
+
+ul li a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+ul li:hover {
+    background: yellowgreen;
+    cursor: pointer;
+}
+
+#active {
+    background: darkcyan !important;
+}
+
+/* animation start*/
+
+@keyframes mybanner {
+    25% {
+        background-image: url(image2.jpg);
+        background-size: 100% 100%;
+    }
+    50% {
+        background-image: url(image3.jpg);
+        background-size: 100% 100%;
+    }
+    75% {
+        background-image: url(image4.jpg);
+        background-size: 100% 100%;
+    }
+}
+
+#banner {
+    background-image: url(image1.jpg);
+    background-size: 100% 100%;
+    height: 400px;
+    animation: mybanner;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes mypic {
+
+    25% {
+        background-image: linear-gradient(to left, red, green, blue);
+    }
+
+    40% {
+        background-image: linear-gradient(to right, red, green, blue);
+    }
+
+    60% {
+        background-image: linear-gradient(to left, red, green, yellow);
+    }
+}
+
+.imgcover {
+    height: 200px;
+    width: 200px;
+    padding: 1.6%;
+    display: inline-block;
+    background-image: linear-gradient(blue, red, green);
+    background-size: 100% 100%;
+    margin:20px;
+    animation: mypic;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.imgcover img {
+    height: 100%;
+    width: 100%;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+#intro, #logo {
+    margin: 25px;
+}
+
+#logo .fa {
+    color: purple;
+    text-shadow: 0px 0px 40px purple;
+    font-size: 300px !important;
+}
+
+#intro {
+    font-size: 22px;
+    color: blue;
+}
+
+#logo {
+    padding-top: 40px;
+}
+
+fieldset {
+    width: 30%;
+    margin: 50px auto 50px;
+    border: 10px double orange;
+    padding: 30px;
+}
+
+legend {
+    background-color: orange;
+    padding: 6px 20px 6px;
+    font-size: 25px;
+    border: 50px;
+}
+
+.row {
+    padding: 10px;
+}
+
+.smallinput {
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+}
+
+.biginput {
+    height: 100px;
+}
+
+.center {
+    text-align: center;
+
+}
+
+button {
+    color: white;
+    font-size: 22px;
+    background: blue;
+    padding: 7px 20px 7px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: black;
+}
+
+button:focus{
+    background: red;
+    border-radius: 50%;   
+}
+
+#servicelist {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    text-align: center;
+}
+
+.service {
+    margin: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 1s;
+}
+
+.service:hover {
+    box-shadow: 0px 0px 3px grey;
+}
+
+.service h3 {
+    color: blue;
+    font-size: 25px;
+}
+
+.red { color: red;}
+
+.green { color:green}
+
+.blue { color:blue }
+
+.orange { color: orange}
+
+.maroon { color:maroon}
+
+.purple { color:purple}
+
+
+/*Media query for extra small screen devices*/
+
+@media screen and (min-width: 1px) and (max-width: 700px) {
+    
+    #servicelist {
+        grid-template-columns: auto;
+    }
+    
+    fieldset {
+        width: 75% !important;
+        margin: 2% !important;
+        border: 2px solid orange;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    #about {
+        grid-template-columns: auto !important;
+    }
+
+    .imgcover {
+        width: 90% !important;
+
+    }
+
+    #container {
+        width: 95%;
+
+    }
+
+    ul li {
+        padding: 5px;
+    }
+    
+    ul li a {
+        font-size: 13px;
+    }
+
+    #banner {
+        height: 180px;
+    }
+}
+
+/*Media query for medium screen devices*/
+
+@media screen and (min-width: 701px) and (max-width: 1050px) {
+    #servicelist {
+        grid-template-columns: auto auto;
+    }
+    
+    fieldset {
+        width: 60% !important;
+        margin: auto !important;
+        border: 2px solid orange;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    #about {
+        grid-template-columns: auto !important;
+    }
+
+    .imgcover {
+        width: 90% !important;
+
+    }
+
+    #container {
+        width: 95%;
+    }
+
+    ul li {
+        padding: 5px;
+    }
+    
+    ul li a {
+        font-size: 16px;
+    }
+
+    #banner {
+        height: 210px;
+    }
+}
+
+/*Media query for large screen devices*/
+
+@media screen and (min-width: 1051px) and (max-width: 1300px) {
+    fieldset {
+        width: 50% !important;
+        margin: auto !important;
+        border: 2px solid orange;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    #about {
+        grid-template-columns: auto auto !important;
+    }
+
+    .imgcover {
+        width: 40% !important;
+
+    }
+
+    #container {
+        width: 95%;
+    }
+
+    ul li {
+        padding: 8px;
+    }
+    
+    ul li a {
+        font-size: 26px;
+    }
+
+    #banner {
+        height: 280px;
+    }
+}

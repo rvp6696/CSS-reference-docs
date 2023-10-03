@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Set 1 </title>
+        <style>
+
+            header {
+                background: #2c786c;
+                text-align: center;
+                color: white;
+                border-bottom: 8px solid white;
+                margin: auto;
+                width: 980px;
+            }
+
+            footer {
+                background: #2c786c;
+                text-align: center;
+                color: white;
+                border-top: 8px solid white;
+                margin: auto;
+                width: 980px;
+            }
+
+            section {
+                
+                text-align: center;
+                color: white;
+                margin: auto;
+                height: 400px;
+                width: 980px;
+                display: grid;
+                grid-template-columns: 20% 80%;
+            }
+
+            #upper {
+                height: 60px;
+                font-size: 30px;
+                padding: 15px 0px 15px;
+                
+            }
+             
+            #below {
+                height: 40px;
+                font-size: 30px;
+                padding-top: 5px;
+                
+            }
+
+            .lower{
+                font-size: 15px;
+            }
+
+            #side {
+                font-size: 30px;
+                border-right: 8px solid white;
+                background: #2c786c; 
+                padding: 160px 0px 160px;
+            }
+
+            #content {
+                font-size: 30px;
+                background: #2c786c;
+                padding: 160px 0px 160px;
+            
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header> 
+            <div id="upper"> Header <div class="lower"> 980x140 </div> </div>
+        </header>
+
+        <section>
+            <div id="side"> Sidebar <div class="lower"> 270x450 </div> </div>
+            <div id="content"> Content <div class="lower"> 690x450 </div> </div>
+        </section>
+        
+        <footer> 
+            <div id="below"> Footer <label class="lower"> 980x70 </label> </div>
+            
+        </footer>
+    </body>
+</html>
